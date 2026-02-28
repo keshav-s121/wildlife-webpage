@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+   width: 100%;
+    padding-left: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    
+    
+   
+}
+
+header nav a{
+    color: rgb(15, 15, 16);
+    text-decoration: none; 
+    margin-right: 5px;
+    padding: 7px 15px;
+    transition: 0.2s;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 40px;
+     background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+a.active{
+    background: #175701;
+    border-radius: 2px;
+   
+}
+a:hover {
+    background: #175701;
+    border-radius: 24px;
+    color: aliceblue;
+}
+
+.caro{
+    width:  100vw;
+    height: 100vh;
+    margin-top: -50px;
+    overflow: hidden;
+    position: relative;
+}
+.caro .list .itam{
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-70%);
+    left: 70%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    background-position: 50% 50%;
+    background-size:cover ;
+    z-index: 100;
+    transition: 1s;
+}
+.caro .list .itam:nth-child(1),
+.caro .list .itam:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+.caro .list .itam:nth-child(3){
+    left: 50%;
+}
+.caro .list .itam:nth-child(4){
+    left: calc(50% + 200px);
+}
+
+.caro .list .itam:nth-child(5){
+    left: calc(50% + 400px);
+}
+
+.caro .list .itam:nth-child(6){
+    left: calc(50% + 600px);
+}
+
+.caro .list .itam:nth-child(n+7){
+    left: calc(50% + 800px);
+}
+.itam .cantaner{
+    position: absolute;
+    top: 45%;
+left: 30px;
+transform: translateY(-50%);
+width: 440px;
+text-align: left;
+color: aliceblue;
+display: none;
+}
+
+
+
+.list .itam:nth-child(2) .cantaner{
+    display: block;
+
+}
+
+.cantaner .name{
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
+    color: #175701;
+    opacity: 0;
+animation: animate 1s ease-in-out 0.8s 1 forwards;
+}
+.cantaner .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 5px;
+    color: #ffffff;
+    font-weight: 500;
+
+ padding: 20px 40px;
+    border-radius: 30px;
+
+
+
+     background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+opacity: 0;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+.cantaner .btn{
+    margin-left: 5px;
+
+
+opacity: 0;
+    animation: animate 1s ease-in-out 1.2s 1 forwards;
+
+}
+.cantaner .btn button{
+    padding: 10px 20px ;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    background-color: #175701;
+    color: #ffffff;
+}
+.cantaner .btn button:nth-child(1){
+    margin-right: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: 700;
+}
+
+.cantaner .btn button:nth-child(2){
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+   color: #144c01;
+   
+    border: none;
+    transition: 0.3s;
+font-weight: 700;
+     background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+}
+
+.cantaner .btn button:nth-child(2):hover{
+    background-color: #175701;
+    color: #ffffff;
+}
+.cantaner .btn button:nth-child(1):hover{
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    color: #175701;
+}
+
+@keyframes animate{
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+.arrow{
+    position: absolute;
+    top: 88%;
+left: 3%;
+z-index: 100;
+width: 300px;
+max-width: 30%;
+display: flex;
+gap: 10px;
+align-items: center;
+
+
+}
+.arrow button{
+    width: 50px;
+    height: 50px;
+
+
+  background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 29px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+    color: #175701;
+    font-weight: bolder;
+    
+opacity: 0;
+    animation: animate 1s ease-in-out 1.2s 1 forwards;
+
+
+}
+
+.arrow button:hover{
+    background-color: #175701;
+    color: #ffffff;
+
+}
+@media screen and (max-width:999px){
+    header{
+        padding-left: 50px;
+    }
+    .itam .cantaner{
+        left: 50px;
+    }
+    .cantaner .name{
+        font-size: 70px;
+    }
+    .cantaner .des{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:690px){
+    header nav a{font-size: 14px;
+        margin-right: 0px;
+
+    }
+    .itam .cantaner{
+        top: 30%;
+    }
+    .cantaner .name{
+        font-size: 45px;
+    }
+    .cantaner .but button{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .cantaner .des{
+        font-size: 12px;
+        width: 250px;
+        padding: 15px 15px 15px 15px;
+    }
+}
+ .caro .timerun{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 4px;
+    background-color: transparent;
+    left: 0;
+    top: 0;
+animation: runtime 7s linear 1 forwards;
+}
+@keyframes runtime{
+    from{
+        width: 0%;
+    }to{
+        width: 100%;
+    }
+}
+
+
+.login-page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+     background: rgba(0,0,0,0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-box{
+     background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 30px;
+    text-align: center;
+    width: 300px;
+    
+}
+
+.login-box input{
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+.b{
+     background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: none;
+    border-radius: 30px;
+}
+.v{
+    padding: 10px 20px; background-color: #175701; color: aliceblue;
+        border: none; border-radius: 40px;
+        transition: 0.5s;
+        margin-top: 10px;
+         font-weight: 800;
+}
+.v:hover{
+    background-color: #ffffff;
+    color: #144c01;
+   
+}
+.hhh{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
